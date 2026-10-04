@@ -1,0 +1,27 @@
+{
+  "title": "Philidor's legacy",
+  "description": "White to move. Mate in 3.",
+  "turn": "white",
+  "pieces": [
+    { "type": "king", "color": "white", "square": "g1" },
+    { "type": "queen", "color": "white", "square": "b3" },
+    { "type": "knight", "color": "white", "square": "f7" },
+    { "type": "pawn", "color": "white", "square": "f2" },
+    { "type": "pawn", "color": "white", "square": "g2" },
+    { "type": "pawn", "color": "white", "square": "h2" },
+    { "type": "king", "color": "black", "square": "g8" },
+    { "type": "queen", "color": "black", "square": "a5" },
+    { "type": "rook", "color": "black", "square": "e8" },
+    { "type": "pawn", "color": "black", "square": "a7" },
+    { "type": "pawn", "color": "black", "square": "b7" },
+    { "type": "pawn", "color": "black", "square": "g7" },
+    { "type": "pawn", "color": "black", "square": "h7" }
+  ],
+  "solution": [
+    { "from": "f7", "to": "h6" },
+    { "from": "g8", "to": "h8" },
+    { "from": "b3", "to": "g8" },
+    { "from": "e8", "to": "g8" },
+    { "from": "h6", "to": "f7" }
+  ]
+}
