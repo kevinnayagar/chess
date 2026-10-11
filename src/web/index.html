@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chess puzzle test page</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; margin: 24px; background: #f4f4f4; color: #222; }
+    .wrap { max-width: 520px; margin: 0 auto; }
+    .controls { display: flex; gap: 8px; margin-bottom: 12px; }
+    select, button { font-size: 15px; padding: 6px 10px; }
+    select { flex: 1; }
+    .note { margin-top: 16px; font-size: 13px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Chess puzzles</h1>
+    <div class="controls">
+      <select id="puzzle-select">
+        <option value="puzzles/01-back-rank-mate-in-1.json">1. Back rank (white, mate in 1)</option>
+        <option value="puzzles/02-smothered-mate-in-2.json">2. Smothered mate (white, mate in 2)</option>
+        <option value="puzzles/03-philidor-mate-in-3.json">3. Philidor's legacy (white, mate in 3)</option>
+        <option value="puzzles/04-queen-sacrifice-black-mate-in-2.json">4. Queen sacrifice (black, mate in 2)</option>
+      </select>
+      <button id="reset">Reset</button>
+    </div>
+
+    <div id="board"></div>
+
+    <p class="note">
+      Puzzles are loaded with <code>fetch</code>, so this page must be served over HTTP
+      (e.g. <code>python3 -m http.server</code> in this folder, then open
+      <code>http://localhost:8000</code>) rather than opened as a <code>file://</code> URL.
+    </p>
+  </div>
+
+  <script src="chess.js"></script>
+  <script>
+    var select = document.getElementById('puzzle-select');
+    var game = ChessPuzzle.create('#board', { puzzle: select.value });
+    select.addEventListener('change', function () { game.load(select.value); });
+    document.getElementById('reset').addEventListener('click', function () { game.reset(); });
+  </script>
+</body>
+</html>

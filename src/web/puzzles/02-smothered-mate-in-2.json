@@ -1,0 +1,22 @@
+{
+  "title": "Smothered mate",
+  "description": "White to move. Mate in 2.",
+  "turn": "white",
+  "pieces": [
+    { "type": "king", "color": "white", "square": "g1" },
+    { "type": "queen", "color": "white", "square": "c4" },
+    { "type": "knight", "color": "white", "square": "h6" },
+    { "type": "pawn", "color": "white", "square": "f2" },
+    { "type": "pawn", "color": "white", "square": "g2" },
+    { "type": "pawn", "color": "white", "square": "h2" },
+    { "type": "king", "color": "black", "square": "h8" },
+    { "type": "rook", "color": "black", "square": "e8" },
+    { "type": "pawn", "color": "black", "square": "g7" },
+    { "type": "pawn", "color": "black", "square": "h7" }
+  ],
+  "solution": [
+    { "from": "c4", "to": "g8" },
+    { "from": "e8", "to": "g8" },
+    { "from": "h6", "to": "f7" }
+  ]
+}

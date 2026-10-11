@@ -1,0 +1,23 @@
+{
+  "title": "Queen sacrifice",
+  "description": "Black to move. Mate in 2.",
+  "turn": "black",
+  "pieces": [
+    { "type": "king", "color": "white", "square": "g1" },
+    { "type": "rook", "color": "white", "square": "d1" },
+    { "type": "pawn", "color": "white", "square": "f2" },
+    { "type": "pawn", "color": "white", "square": "g2" },
+    { "type": "pawn", "color": "white", "square": "h2" },
+    { "type": "king", "color": "black", "square": "g8" },
+    { "type": "queen", "color": "black", "square": "e5" },
+    { "type": "rook", "color": "black", "square": "e8" },
+    { "type": "pawn", "color": "black", "square": "f7" },
+    { "type": "pawn", "color": "black", "square": "g7" },
+    { "type": "pawn", "color": "black", "square": "h7" }
+  ],
+  "solution": [
+    { "from": "e5", "to": "e1" },
+    { "from": "d1", "to": "e1" },
+    { "from": "e8", "to": "e1" }
+  ]
+}
